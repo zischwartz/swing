@@ -96,7 +96,9 @@ const Card = (stack, targetElement) => {
       ]
     });
 
-    Card.appendToParent(targetElement);
+    // XXX changed by zach
+    Card.prependToParent(targetElement);
+    // Card.appendToParent(targetElement);
 
     eventEmitter.on('panstart', () => {
       Card.appendToParent(targetElement);
@@ -428,6 +430,13 @@ Card.appendToParent = (element) => {
     parentNode.removeChild(element);
     parentNode.appendChild(element);
   }
+};
+
+// Added by zach based on a comment
+Card.prependToParent =  (element) => {
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    parent.insertBefore(element,parent.firstChild);
 };
 
 /**
