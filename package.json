@@ -36,7 +36,7 @@
     "swipeable"
   ],
   "license": "BSD-3-Clause",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "name": "swing",
   "repository": {
     "type": "git",
